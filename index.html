@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24/7 e-Service Portal</title>
+  <style>
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header Styling */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    /* Navigation Styling */
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #0056b3;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* Container and Section Styling */
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .greeting, #services, #contact {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 30px;
+      text-align: left;
+    }
+
+    /* Section Titles */
+    #services h2, #contact h2 {
+      color: #007bff;
+      font-weight: bold;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    /* Service Cards */
+    #services {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Landscape layout */
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .service-card {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px); /* Hover effect */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Animation for Fade In */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Service Card Animation Delay for Staggered Effect */
+    #services .service-card:nth-child(even) {
+      animation-delay: 0.2s;
+    }
+
+    #services .service-card:nth-child(odd) {
+      animation-delay: 0.4s;
+    }
+
+    /* Buttons */
+    .whatsapp-link {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 24px;
+      color: #fff;
+      background-color: #25d366;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .whatsapp-link:hover {
+      background-color: #1ebe5d;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    footer .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    footer .footer-content img {
+      width: 60px;
+      height: auto;
+    }
+
+    footer .footer-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    footer .footer-links a {
+      color: #bbb;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    footer .footer-links a:hover {
+      color: #fff;
+    }
+
+    /* Media Queries for Smaller Screens */
+    @media screen and (max-width: 768px) {
+      #services {
+        grid-template-columns: 1fr; /* Stack services vertically on mobile */
+      }
+
+      .service-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div>
+      <h1>Welcome to the 24/7 e-Service Portal</h1>
+      <p>Your one-stop solution for all government and personal e-services</p>
+    </div>
+    <!-- Logo on the right with adjusted size -->
+    <img src="logo1.png" alt="24/7 e-Service Portal Logo" style="width: 145px; height: auto;">
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav>
+    <a href="#services">Our Services</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+
+  <div class="container">
+    <!-- Greeting Section -->
+    <section class="greeting">
+      <h2>Hello, Welcome!</h2>
+      <p>Our portal provides reliable and secure access to essential online services like Aadhaar, PAN Card, and more. Get professional assistance with services like photography, video editing, and form filling. Reach out to us anytime on WhatsApp for prompt support!</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="service-card">
+        <h3>Aadhaar Card Services</h3>
+        <p>Apply for a new Aadhaar card, update your details, or check Aadhaar status. Reach out for guided assistance on Aadhaar-related needs.</p>
+      </div>
+      <div class="service-card">
+        <h3>PAN Card Services</h3>
+        <p>Assistance with PAN card application, correction, and updates. Ensure smooth financial transactions with accurate PAN details.</p>
+      </div>
+      <div class="service-card">
+        <h3>Photography Services</h3>
+        <p>Book professional photography sessions for events, portraits, and more. Contact us to capture your moments with quality service.</p>
+      </div>
+      <div class="service-card">
+        <h3>Video Editing</h3>
+        <p>High-quality video editing for personal or business projects. Contact us to bring your video content to life with professional edits.</p>
+      </div>
+      <div class="service-card">
+        <h3>Online Form Filling Assistance</h3>
+        <p>Expert help with filling out online forms correctly to avoid delays. Contact us for assistance with government or other forms.</p>
+      </div>
+    </section>
+
+    <!-- WhatsApp Contact -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>If you need help or have any questions, reach out to us on WhatsApp. Our team is ready to assist you 24/7 with any inquiries.</p>
+      <a href="https://wa.me/917096520833" target="_blank" class="whatsapp-link">Contact on WhatsApp</a>
+    </section>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <img src="logo1.png" alt="24/7 e-Service Portal Logo">
+      <p>&copy; 2024 24/7 e-Service Portal. All rights reserved. Created by Tejash.</p>
+      <div class="footer-links">
+        <a href="#privacy-policy">Privacy Policy</a>
+        <a href="#security">Security</a>
+        <a href="#website-accessibility">Website Accessibility</a>
+        <a href="#manage-cookies">Manage Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
